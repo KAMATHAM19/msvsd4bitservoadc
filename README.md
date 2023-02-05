@@ -2,9 +2,9 @@
 
 
 # Table of Contents
-* [Week 0](# week-0)
-  * Prerequisite
-  * Open Source tools 
+# [Week 0](#week-0)
+   * Prerequisite
+   * Open Source tools 
 
 
 <a name="week-0"></a>
