@@ -58,3 +58,37 @@ $  make
 $  sudo make install
 
 ```
+3. Netgen
+
+```
+$  git clone git://opencircuitdesign.com/netgen
+$  cd netgen
+$	./configure
+$  make
+$  sudo make install
+```
+4. Xschem
+```
+$  git clone https://github.com/StefanSchippers/xschem.git xschem_git
+$ cd xschem_git
+$	./configure
+$  make
+$  sudo make install
+```
+library
+``` 
+sudo apt-get install flex
+sudo apt-get install bison
+sudo apt-get install libxpm-dev 
+```
+5. Ngspice
+```
+sudo apt-get update
+sudo apt-get install ngspice
+sudo apt-get install xterm
+```
+6. ALIGN tool
+pre - gcc >= 6.1.0
+      python >= 3.7
+      
+ 
