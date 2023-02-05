@@ -10,7 +10,7 @@
 <a name="week-0"></a>
 # Week 0
 
-Prerequisite
+## Prerequisite
 
 1. Oracle Virtual box(https://www.virtualbox.org/wiki/Downloads)
 2. Linux ubuntu(https://ubuntu.com/download/desktop)
@@ -20,7 +20,7 @@ Prerequisite
  sudo apt-get install git
  ```
 
-Open Source tools
+## Open Source tools
 
 1. Magic
 
