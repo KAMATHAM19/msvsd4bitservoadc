@@ -27,7 +27,7 @@
 ```
 $  git clone git://opencircuitdesign.com/magic
 $  cd magic
-$	 ./configure
+$	./configure
 $  make
 $  sudo make install
 
