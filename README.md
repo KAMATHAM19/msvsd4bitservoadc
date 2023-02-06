@@ -97,6 +97,26 @@ export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 git clone https://github.com/ALIGN-analoglayout/ALIGN-public
 cd ALIGN-public
+sudo apt update
+sudo apt install python3.10-venv
+python3 -m venv general
+source general/bin/activate
+python3 -m pip install pip --upgrade
+
+pip install -v .
+error - wheels not found Could not build wheels for align, which is required to install pyproject.toml-based projects/ailed building wheel for gdspy
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install wheel
+sudo apt-get install python3-dev libffi-dev libssl-dev
+pip install gdspy
+pip install --no-binary :all: gdspy
+
+
+
+
+
+
 
 
 
