@@ -88,7 +88,17 @@ sudo apt-get install ngspice
 sudo apt-get install xterm
 ```
 6. ALIGN tool
-pre - gcc >= 6.1.0
-      python >= 3.7
+pre -
+gcc >= 6.1.0
+python >= 3.7
+
+``` 
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+git clone https://github.com/ALIGN-analoglayout/ALIGN-public
+cd ALIGN-public
+
+
+
       
  
