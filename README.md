@@ -3,14 +3,16 @@
 
 # Table of Contents
 # [Week 0](#week-0)
-   * Prerequisite
-   * Open Source tools 
+   * [Prerequisite](#prerequisites")
+   * [Open Source tools](#open-source-tools)
+   * Inverter
 
 
 <a name="week-0"></a>
 # Week 0
 
-## Prerequisite
+<a name="prerequisites"></a>
+## Prerequisites
 
 1. Oracle Virtual box(https://www.virtualbox.org/wiki/Downloads)
 2. Linux ubuntu(https://ubuntu.com/download/desktop)
@@ -19,7 +21,10 @@
 ``` 
  sudo apt-get install git
  ```
-
+ 4. gcc >= 6.1.0   
+ 5. python >= 3.7
+ 
+<a name="open-source-tools"></a> 
 ## Open Source tools
 
 1. Magic
@@ -89,6 +94,7 @@ sudo apt-get install xterm
 ```
 6. ALIGN tool
 pre -
+
 gcc >= 6.1.0
 python >= 3.7
 
@@ -112,6 +118,18 @@ sudo apt-get install python3-dev libffi-dev libssl-dev
 pip install gdspy
 pip install --no-binary :all: gdspy
 
+align
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install wheel
+pip install align
+pip install --no-binary :all: align
+
+boost not found
+sudo apt-get install libboost-all-dev
+re-run user command
+
+
 pip install -e .
 pip install setuptools wheel pybind11 scikit-build cmake ninja
 ip install -v -e .[test] --no-build-isolation
@@ -119,9 +137,19 @@ pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TES
 
 ```
 
+```
+git clone https://github.com/ALIGN-analoglayout/ALIGN-pdk-sky130
+```
+SKY130_PDK to /home/venkat/PD/ALIGN-public/pdks
 
+python3 -m venv general
+source general/bin/activate
 
+mkdir work && cd work
 
+$ schematic2layout.py <NETLIST_DIR> -p <PDK_DIR> -c
+schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
+schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/SKY130_PDK/
 
 
 
