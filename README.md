@@ -112,7 +112,12 @@ sudo apt-get install python3-dev libffi-dev libssl-dev
 pip install gdspy
 pip install --no-binary :all: gdspy
 
+pip install -e .
+pip install setuptools wheel pybind11 scikit-build cmake ninja
+ip install -v -e .[test] --no-build-isolation
+pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TESTING=ON'
 
+```
 
 
 
