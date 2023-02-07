@@ -2,8 +2,8 @@
 
 
 # Table of Contents
-# [Week 0](#week-0)
-   * [Prerequisite](#prerequisites")
+### [Week 0](#week-0)
+   * [Prerequisites](#prerequisites)
    * [Open Source tools](#open-source-tools)
    * Inverter
 
@@ -12,17 +12,13 @@
 # Week 0
 
 <a name="prerequisites"></a>
-## Prerequisites
+### Prerequisites
 
-1. Oracle Virtual box(https://www.virtualbox.org/wiki/Downloads)
-2. Linux ubuntu(https://ubuntu.com/download/desktop)
-3. Git
-
-``` 
- sudo apt-get install git
- ```
- 4. gcc >= 6.1.0   
- 5. python >= 3.7
+1. Oracle Virtual box (https://www.virtualbox.org/wiki/Downloads)
+2. Linux ubuntu (https://ubuntu.com/download/desktop)
+3. Git `sudo apt-get install git`
+4. GCC >= 6.1.0  `sudo apt-get install gcc-6 g++-6`
+5. Python >= 3.7 `sudo apt-get install python3.7`
  
 <a name="open-source-tools"></a> 
 ## Open Source tools
@@ -141,16 +137,22 @@ pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TES
 git clone https://github.com/ALIGN-analoglayout/ALIGN-pdk-sky130
 ```
 SKY130_PDK to /home/venkat/PD/ALIGN-public/pdks
-
+```
 python3 -m venv general
 source general/bin/activate
-
+```
+```
 mkdir work && cd work
-
+```
+```
 $ schematic2layout.py <NETLIST_DIR> -p <PDK_DIR> -c
+```
+```
 schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
+```
+```
 schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/SKY130_PDK/
-
+```
 
 
       
