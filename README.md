@@ -76,6 +76,16 @@ $	./configure
 $  make
 $  sudo make install
 ```
+
+Software requirements:
+- X11
+- tcl-tk libs and developent files
+- c99 compiler
+- bison (only for compiling the grammar parser)
+- flex (only for compiling the lexical analyzer
+- Xpm library and -dev header files
+- awk (tested with gawk and mawk)
+
 library
 ``` 
 sudo apt-get install flex
