@@ -2,14 +2,14 @@
 
 
 # Table of Contents
-### [Week 0](#week-0)
+## [Week 0](#week-0)
    * [Prerequisites](#prerequisites)
    * [Open Source tools](#open-source-tools)
    * Inverter
 
 
 <a name="week-0"></a>
-# Week 0
+## Week 0
 
 <a name="prerequisites"></a>
 ### Prerequisites
@@ -21,7 +21,7 @@
 5. Python >= 3.7 `sudo apt-get install python3.7`
  
 <a name="open-source-tools"></a> 
-## Open Source tools
+### Open Source tools
 
 1. Magic
 
