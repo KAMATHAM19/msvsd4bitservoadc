@@ -5,7 +5,7 @@
 ## [Week 0](#week-0)
    * [Prerequisites](#prerequisites)
    * [Open Source tools](#open-source-tools)
-   * Inverter
+   * CMOS Inverter
 
 
 <a name="week-0"></a>
@@ -106,12 +106,22 @@ sudo apt-get install libjpeg-dev
 ```
 5. Ngspice
 ```
-git clone git://git.code.sf.net/p/ngspice/ngspice ngspice
-cd ngspice
-git checkout pre-master
+ $ tar -zxvf ngspice-37.tar.gz
+ $ cd ngspice-37
+ $ mkdir release
+ $ cd release
+ $ ../configure  --with-x --with-readline=yes --disable-debug
+ $ make
+ $ sudo make install
+ 
+ errors
+ sudo apt-get install libxaw7-dev
+ sudo apt-get install libreadline-dev
 
 ```
+
 6. ALIGN tool
+
 pre -
 
 gcc >= 6.1.0
