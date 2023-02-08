@@ -70,11 +70,20 @@ $  sudo make install
 ```
 4. Xschem
 ```
-$  git clone https://github.com/StefanSchippers/xschem.git xschem_git
-$ cd xschem_git
-$	./configure
-$  make
-$  sudo make install
+git clone https://github.com/StefanSchippers/xschem.git xschem
+cd xschem
+./configure --prefix=/home/venkat 
+make -j4
+make install
+
+for sxchem built sky130 
+in xschem library folder
+cd xschem_library
+git clone https://github.com/StefanSchippers/xschem_sky130.git xschem_sky130
+cd xschem_sky130/
+
+
+
 ```
 
 Software requirements:
@@ -91,12 +100,16 @@ library
 sudo apt-get install flex
 sudo apt-get install bison
 sudo apt-get install libxpm-dev 
+sudo apt-get install libx11-xcb-dev
+sudo apt-get install libjpeg-dev
+
 ```
 5. Ngspice
 ```
-sudo apt-get update
-sudo apt-get install ngspice
-sudo apt-get install xterm
+git clone git://git.code.sf.net/p/ngspice/ngspice ngspice
+cd ngspice
+git checkout pre-master
+
 ```
 6. ALIGN tool
 pre -
@@ -164,6 +177,7 @@ schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
 schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/SKY130_PDK/
 ```
 
+## CMOS INVERTER
 
       
  
