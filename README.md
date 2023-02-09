@@ -25,16 +25,15 @@
 
 1. Magic
 
+Magic is a VLSI Layout tool.
+To begin installing the open source tool, go to http://opencircuitdesign.com/magic/ and the following steps
+
 ```
 $  git clone git://opencircuitdesign.com/magic
 $  cd magic
 $	./configure
-$  make
-$  sudo make install
-
 ```
-while running the command `./configure` if you got an error `configure: error: cannot find /bin/csh---cannot compile!` we need to follow the steps shown below
-
+while running the command `./configure` If you received the error `configure: error: cannot find /bin/csh—-cannot compile!` We must take the steps outlined below.
 ```
 $ sudo apt-get install m4
 $ sudo apt-get install tcsh
@@ -42,15 +41,21 @@ $ sudo apt-get install csh
 $ sudo apt-get install libx11-dev
 $ sudo apt-get install tcl-dev tk-dev
 $ sudo apt-get install mesa-common- dev libglu1-mesa-dev
-
 optional
 $ sudo apt-get install libcairo2-dev
-
 ```
-After compiling these commands run ./configure 
+Magic requires the following additional packages to be compiled. After installing all of the packages and running the `./configure` command again
+```
+$  make
+$  sudo make install
+```
+
 
 2. SKY130 PDKs
 
+Process Design Kits, or OpenPDKs, are open source libraries and tools for designing and manufacturing integrated circuits (ICs). They provide a detailed set of design rules, library components, and other resources required for the physical design of an integrated circuit.
+
+To begin installing the open source tool, go to http://opencircuitdesign.com/open_pdks/ and the following steps
 ```
 $  git clone git://opencircuitdesign.com/open_pdks
 $  open_pdks
@@ -61,6 +66,9 @@ $  sudo make install
 ```
 3. Netgen
 
+Netgen is an open-source tool for creating electrical circuits and layouts automatically. It can generate a wide range of electrical circuits, such as full-custom layouts, standard cell-based layouts, and gate arrays. It can also generate routing data and physical masks for use in the fabrication of the final IC.
+To begin installing the open source tool, go to http://opencircuitdesign.com/netgen/ and the following steps
+
 ```
 $  git clone git://opencircuitdesign.com/netgen
 $  cd netgen
@@ -68,42 +76,39 @@ $	./configure
 $  make
 $  sudo make install
 ```
+
 4. Xschem
+
+XSCHEM is an open-source schematic capture tool for designing electronic circuits. It is available at https://github.com/StefanSchippers/xschem, and installation instructions are provided. 
 ```
 git clone https://github.com/StefanSchippers/xschem.git xschem
 cd xschem
 ./configure --prefix=/home/venkat 
-make -j4
-make install
-
-for sxchem built sky130 
-in xschem library folder
-cd xschem_library
-git clone https://github.com/StefanSchippers/xschem_sky130.git xschem_sky130
-cd xschem_sky130/
-
-
-
 ```
-
-Software requirements:
-- X11
-- tcl-tk libs and developent files
-- c99 compiler
-- bison (only for compiling the grammar parser)
-- flex (only for compiling the lexical analyzer
-- Xpm library and -dev header files
-- awk (tested with gawk and mawk)
-
-library
+To avoid errors after running the `./configure` command, some additional libraries should be installed in the system.
 ``` 
 sudo apt-get install flex
 sudo apt-get install bison
 sudo apt-get install libxpm-dev 
 sudo apt-get install libx11-xcb-dev
 sudo apt-get install libjpeg-dev
+```
+Rerun the `./configure` command after installing the libraries.
+```
+make -j4
+make install
+```
+After installing xschem, we should install xschem_sky130 in order to obtain XSCHEM symbol libraries for the Google-Skywater 130nm process design kit. It is available at https://github.com/StefanSchippers/xschem_sky130, and installation instructions are provided. 
 
 ```
+cd xschem_library
+git clone https://github.com/StefanSchippers/xschem_sky130.git xschem_sky130
+cd xschem_sky130/
+```
+
+
+
+
 5. Ngspice
 ```
  $ tar -zxvf ngspice-37.tar.gz
