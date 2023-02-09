@@ -273,5 +273,6 @@ The schematic circuit is created by connecting components from the open_pdk libr
 
 <img width="923" alt="transient sch" src="https://user-images.githubusercontent.com/64173714/217958466-b3f6650e-7248-400f-bfbf-6537ebb4876c.png">
 
+Transient analysis of a circuit is the simulation of the circuit's electrical behaviour over time, specifically its response to changing input signals.
 
 <img width="745" alt="tran grap" src="https://user-images.githubusercontent.com/64173714/217958494-7689ef31-a95a-4bcc-840f-be18e72d1dc7.png">
