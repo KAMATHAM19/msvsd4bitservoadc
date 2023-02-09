@@ -49,6 +49,7 @@ Magic requires the following additional packages to be compiled. After installin
 $  make
 $  sudo make install
 ```
+<img width="920" alt="magic" src="https://user-images.githubusercontent.com/64173714/217902603-0b9c9eef-1d04-4b16-92b0-47859671e4f1.png">
 
 
 2. SKY130 PDKs
