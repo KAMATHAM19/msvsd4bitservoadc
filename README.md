@@ -261,6 +261,17 @@ A CMOS inverter is typically made up of two complementary transistors, one p-typ
 One of the primary advantages of CMOS inverters is their low power consumption, as the transistors are only turned on when the input changes state, rather than constantly drawing current. Moreover, CMOS inverters are highly scalable and easily integrated into larger circuits, making them a popular choice for digital system design.    
 
 ## Creating Inverter Schematic using xschem
+The schematic circuit is created by connecting components from the open_pdk library and performing dc analysis.
 
 <img width="922" alt="new inv" src="https://user-images.githubusercontent.com/64173714/217958297-1a19653e-2b18-4c21-95f0-0581908c9495.png">
 
+DC analysis would be used to create a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine how the circuit works with respect to different voltage levels in the input. When the simulation is run, the plot shown below is obtained.
+
+<img width="737" alt="dc plot2" src="https://user-images.githubusercontent.com/64173714/217958433-acfb5f75-26ed-4396-aa74-793e08e94a16.png">
+
+The schematic circuit is created by connecting components from the open_pdk library and performing transient analysis.
+
+<img width="923" alt="transient sch" src="https://user-images.githubusercontent.com/64173714/217958466-b3f6650e-7248-400f-bfbf-6537ebb4876c.png">
+
+
+<img width="745" alt="tran grap" src="https://user-images.githubusercontent.com/64173714/217958494-7689ef31-a95a-4bcc-840f-be18e72d1dc7.png">
