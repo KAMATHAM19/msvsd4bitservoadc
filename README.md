@@ -125,6 +125,8 @@ cd xschem_sky130/
  sudo apt-get install libreadline-dev
 
 ```
+<img width="921" alt="ngspice" src="https://user-images.githubusercontent.com/64173714/217905232-11985213-ed63-4449-9146-add781f941f9.png">
+
 
 6. ALIGN tool
 
@@ -189,9 +191,13 @@ $ schematic2layout.py <NETLIST_DIR> -p <PDK_DIR> -c
 ```
 schematic2layout.py ../examples/telescopic_ota -p ../pdks/FinFET14nm_Mock_PDK/
 ```
+<img width="926" alt="week 0 align -1 " src="https://user-images.githubusercontent.com/64173714/217905400-0bc80b96-65fd-4f0a-b535-bc58447fe04a.png">
+
 ```
 schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/SKY130_PDK/
 ```
+<img width="925" alt="align 2" src="https://user-images.githubusercontent.com/64173714/217905324-340322ca-53a0-4713-9e90-5b6c970abe7c.png">
+
 
 ## CMOS INVERTER
 
