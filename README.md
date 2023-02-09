@@ -63,8 +63,9 @@ $  open_pdks
 $	./configure --enable-sky130-pdk
 $  make
 $  sudo make install
-
 ```
+<img width="922" alt="open_pdk" src="https://user-images.githubusercontent.com/64173714/217903616-ad0e3fc3-993c-4d41-bad9-7f43700431a5.png">
+
 3. Netgen
 
 Netgen is an open-source tool for creating electrical circuits and layouts automatically. It can generate a wide range of electrical circuits, such as full-custom layouts, standard cell-based layouts, and gate arrays. It can also generate routing data and physical masks for use in the fabrication of the final IC.
@@ -77,6 +78,7 @@ $	./configure
 $  make
 $  sudo make install
 ```
+<img width="922" alt="netgen" src="https://user-images.githubusercontent.com/64173714/217904006-9be0048a-e810-40d4-8d72-75bdbd1a1089.png">
 
 4. Xschem
 
@@ -106,9 +108,7 @@ cd xschem_library
 git clone https://github.com/StefanSchippers/xschem_sky130.git xschem_sky130
 cd xschem_sky130/
 ```
-
-
-
+<img width="922" alt="xschem " src="https://user-images.githubusercontent.com/64173714/217904558-a577c075-d8a2-420f-b2c8-8a90bf9e345e.png">
 
 5. Ngspice
 ```
