@@ -5,7 +5,7 @@
 ## [Week 0](#week-0)
    * [Prerequisites](#prerequisites)
    * [Open Source tools](#open-source-tools)
-   * CMOS Inverter
+   * [CMOS Inverter](#cmos-inverter)
 
 
 <a name="week-0"></a>
@@ -233,8 +233,12 @@ schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/
 ```
 <img width="925" alt="align 2" src="https://user-images.githubusercontent.com/64173714/217905324-340322ca-53a0-4713-9e90-5b6c970abe7c.png">
 
-
+<a name="cmos-inverter"></a>
 ## CMOS INVERTER
 
-      
+  A CMOS inverter is a type of digital circuit that converts a digital input signal from one state (e.g., 0 or 1) to its opposite state (e.g., 1 or 0). It is a fundamental component of digital electronics that is widely used in digital systems such as microprocessors, digital logic circuits, and digital-to-analog converters.
+
+A CMOS inverter is typically made up of two complementary transistors, one p-type (pMOS) and one n-type (nMOS). The pMOS transistor pulls the output high, while the nMOS transistor pulls the output low. When the inverter's input is high (1), the nMOS transistor is turned on and the pMOS transistor is turned off, resulting in a low output. When the inverter's input is low (0), the pMOS transistor is turned on and the nMOS transistor is turned off, resulting in a high output.
+
+One of the primary advantages of CMOS inverters is their low power consumption, as the transistors are only turned on when the input changes state, rather than constantly drawing current. Moreover, CMOS inverters are highly scalable and easily integrated into larger circuits, making them a popular choice for digital system design.    
  
