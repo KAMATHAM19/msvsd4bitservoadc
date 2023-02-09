@@ -260,4 +260,7 @@ A CMOS inverter is typically made up of two complementary transistors, one p-typ
 
 One of the primary advantages of CMOS inverters is their low power consumption, as the transistors are only turned on when the input changes state, rather than constantly drawing current. Moreover, CMOS inverters are highly scalable and easily integrated into larger circuits, making them a popular choice for digital system design.    
 
+## Creating Inverter Schematic using xschem
+
+<img width="922" alt="new inv" src="https://user-images.githubusercontent.com/64173714/217958297-1a19653e-2b18-4c21-95f0-0581908c9495.png">
 
