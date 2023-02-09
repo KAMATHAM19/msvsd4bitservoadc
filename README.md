@@ -111,20 +111,26 @@ cd xschem_sky130/
 <img width="922" alt="xschem " src="https://user-images.githubusercontent.com/64173714/217904558-a577c075-d8a2-420f-b2c8-8a90bf9e345e.png">
 
 5. Ngspice
+
+ngspice is an open-source electronic circuit simulator that can be used for circuit analysis and simulation.
+Download the tarball from https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/37/ and unpack it
 ```
  $ tar -zxvf ngspice-37.tar.gz
  $ cd ngspice-37
  $ mkdir release
  $ cd release
  $ ../configure  --with-x --with-readline=yes --disable-debug
- $ make
- $ sudo make install
- 
- errors
+ ```
+ To avoid errors after running the `./configure` command, some additional libraries should be installed in the system.
+ ```
  sudo apt-get install libxaw7-dev
  sudo apt-get install libreadline-dev
-
-```
+ ```
+ Rerun the `./configure` command after installing the libraries.
+ ```
+ $ make
+ $ sudo make install
+ ```
 <img width="921" alt="ngspice" src="https://user-images.githubusercontent.com/64173714/217905232-11985213-ed63-4449-9146-add781f941f9.png">
 
 
