@@ -237,18 +237,18 @@ Verifying the installation of open_pdk
 
 To create an initial working directory, copy the following files:
 ```
-$ mkdir LABS
-$ cd LABS
+$ mkdir Lab1
+$ cd Lab1
 $ mkdir mag
 $ mkdir netgen
 $ mkdir xschem
 $ cd xschem
-$ cp /home/venkat/PD/open_pdks/sky130/sky130A/libs.tech/xschem/xschemrc .
-$ cp /home/venkat/PD/open_pdks/sky130/sky130A/libs.tech/ngspice/spinit .spiceinit
+$ cp /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc .
+$ cp /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
 $ cd ../mag
-$ cp /home/venkat/PD/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+$ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 $ cd ../netgen
-$ cp /home/venkat/PD/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl .
+$ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
 ```
 <a name="cmos-inverter"></a>
 
