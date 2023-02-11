@@ -184,6 +184,7 @@ Use the following commands to install ALIGN tool
 
 1.Setting the compiler paths 
 ```
+sudo apt-get install libboost-all-dev
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 ```
@@ -201,15 +202,7 @@ python3 -m venv general
 source general/bin/activate
 python3 -m pip install pip --upgrade
 ```
-
-4.Install ALIGN as a USER
-```
-pip install -v .
-```
-If the error message "boost not found" appears while running as user, install the necessary libraries `sudo apt-get install libboost-all-dev` and rerun the user command.
-
-To avoid errors in the installation we required build wheels and setuptools for align and gdspy
-for gdspy
+some packages are required to be installed in the system 
 ```
 pip install --upgrade pip
 pip install --upgrade setuptools
@@ -217,15 +210,15 @@ pip install wheel
 sudo apt-get install python3-dev libffi-dev libssl-dev
 pip install gdspy
 pip install --no-binary :all: gdspy
-```
-for align
-```
-pip install --upgrade pip
-pip install --upgrade setuptools
-pip install wheel
 pip install align
 pip install --no-binary :all: align
 ```
+
+4.Install ALIGN as a USER
+```
+pip install -v .
+```
+
 5. Install ALIGN as a DEVELOPER
 ```
 pip install -e .
@@ -233,7 +226,7 @@ pip install -e .
 6.For ALIGN (C++) Extension developers
 ```
 pip install setuptools wheel pybind11 scikit-build cmake ninja
-ip install -v -e .[test] --no-build-isolation
+pip install -v -e .[test] --no-build-isolation
 pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TESTING=ON'
 ```
 Adapting ALIGN to Sky130 technology
@@ -242,7 +235,7 @@ Clone the following ALIGN-public directory repository
 ```
 git clone https://github.com/ALIGN-analoglayout/ALIGN-pdk-sky130
 ```
-move `SKY130_PDK` folder to `/home/venkat/PD/ALIGN-public/pdks`
+move `SKY130_PDK` folder to `/home/venkat/pd/ALIGN-public/pdks`
 
 Running ALIGN TOOL
 
@@ -315,3 +308,5 @@ The schematic circuit is created by connecting components from the open_pdk libr
 Transient analysis of a circuit is the simulation of the circuit's electrical behaviour over time, specifically its response to changing input signals.
 
 <img width="745" alt="tran grap" src="https://user-images.githubusercontent.com/64173714/217958494-7689ef31-a95a-4bcc-840f-be18e72d1dc7.png">
+
+
