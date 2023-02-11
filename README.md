@@ -36,32 +36,39 @@
 <a name="magic"></a> 
 1. Magic
 
-Magic is a VLSI Layout tool.
-To begin installing the open source tool, go to http://opencircuitdesign.com/magic/ and the following steps
+Magic is a VLSI Layout tool. To begin installing the open source tool, go to http://opencircuitdesign.com/magic/ and download some additional system packages
 
+```
+# install M4 preprocessor
+$ sudo apt-get install m4
+# install tcsh shell
+$ sudo apt-get install tcsh
+# install csh shell
+$ sudo apt-get install csh
+# install Xlib.h
+$ sudo apt-get install libx11-dev
+# install tck/tk libraries
+$ sudo apt-get install tcl-dev tk-dev
+# install OpenGL interface (magic -d OGL)
+$ sudo apt install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
+# install ncurses
+$ sudo apt-get install libncurses-dev
+
+optional
+# install cairo graphics interface (magic -d XR)
+$ sudo apt-get install libcairo2-dev
+```
+After installing the additional packages, use these commands to install magic
 ```
 $  git clone git://opencircuitdesign.com/magic
 $  cd magic
 $	./configure
-```
-while running the command `./configure` If you received the error `configure: error: cannot find /bin/csh—-cannot compile!` We must take the steps outlined below.
-```
-$ sudo apt-get install m4
-$ sudo apt-get install tcsh
-$ sudo apt-get install csh
-$ sudo apt-get install libx11-dev
-$ sudo apt-get install tcl-dev tk-dev
-$ sudo apt-get install mesa-common- dev libglu1-mesa-dev
-optional
-$ sudo apt-get install libcairo2-dev
-```
-Magic requires the following additional packages to be compiled. After installing all of the packages and running the `./configure` command again
-```
 $  make
 $  sudo make install
 ```
-<img width="920" alt="magic" src="https://user-images.githubusercontent.com/64173714/217902603-0b9c9eef-1d04-4b16-92b0-47859671e4f1.png">
+To view the magic application, type `magic -d XR` in the terminal
 
+<img width="922" alt="magic " src="https://user-images.githubusercontent.com/64173714/218270647-44fd6e14-a885-4431-8df3-e4a74a8e2aa9.png">
 
 2. SKY130 PDKs
 
@@ -75,6 +82,8 @@ $	./configure --enable-sky130-pdk
 $  make
 $  sudo make install
 ```
+
+
 <img width="922" alt="open_pdk" src="https://user-images.githubusercontent.com/64173714/217903616-ad0e3fc3-993c-4d41-bad9-7f43700431a5.png">
 
 3. Netgen
