@@ -14,14 +14,17 @@
 <a name="prerequisites"></a>
 ### Prerequisites
 
-1. Oracle Virtual box (https://www.virtualbox.org/wiki/Downloads)
-2. Linux ubuntu (https://ubuntu.com/download/desktop)
-3. Git `sudo apt-get install git`
-4. GCC >= 6.1.0  `sudo apt-get install gcc-6 g++-6`
-5. Python >= 3.7 `sudo apt-get install python3.7`
+1. Windows machine - 4GB RAM, 100GB Hard disk
+2. Oracle Virtual box - 7.0.6 (https://www.virtualbox.org/wiki/Downloads)
+3. Linux ubuntu - 22.04.1 (https://ubuntu.com/download/desktop)
+4. Install Git -  `sudo apt-get install git`
+5. Install GCC compiler -  `sudo apt-get install gcc g++`
+6. Install Python - `sudo apt-get install python3`
  
 <a name="open-source-tools"></a> 
 ### Open Source tools
+
+
 
 1. Magic
 
