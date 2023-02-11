@@ -26,8 +26,12 @@
 
 | | Tools | Description|
 |--|--|--|
-| 1 | [Magic](#magic) | Circuit Layout Editor |
-| 2 |                 |                       |
+| 1 | [Magic](#magic) | Circuit layout editor |
+| 2 | [SKY130 PDKs]() | Sky130nm libraries    |
+| 3 | [Netgen]()      | Netlist generator     |
+| 4 | [Xschem]()      | Schematic editor      |
+| 5 | [Ngspice]()     | SPICE simulation      |
+| 6 | [Align]()       | Analog netlist to GDS |
 
 <a name="magic"></a> 
 1. Magic
