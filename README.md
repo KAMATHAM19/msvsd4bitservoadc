@@ -24,8 +24,12 @@
 <a name="open-source-tools"></a> 
 ### Open Source tools
 
+| | Tools | Description|
+|--|--|--|
+| 1 | [Magic](#magic) | Circuit Layout Editor |
+| 2 |                 |                       |
 
-
+<a name="magic"></a> 
 1. Magic
 
 Magic is a VLSI Layout tool.
