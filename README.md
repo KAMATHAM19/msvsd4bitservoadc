@@ -40,19 +40,19 @@ Magic is a VLSI Layout tool. To begin installing the open source tool, go to htt
 
 ```
 # install M4 preprocessor
-$ sudo apt-get install m4
+  sudo apt-get install m4
 # install tcsh shell
-$ sudo apt-get install tcsh
+  sudo apt-get install tcsh
 # install csh shell
-$ sudo apt-get install csh
+  sudo apt-get install csh
 # install Xlib.h
-$ sudo apt-get install libx11-dev
+  sudo apt-get install libx11-dev
 # install tck/tk libraries
-$ sudo apt-get install tcl-dev tk-dev
+  sudo apt-get install tcl-dev tk-dev
 # install OpenGL interface (magic -d OGL)
-$ sudo apt install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
+  sudo apt install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev
 # install ncurses
-$ sudo apt-get install libncurses-dev
+  sudo apt-get install libncurses-dev
 
 optional
 # install cairo graphics interface (magic -d XR)
@@ -103,22 +103,32 @@ $  sudo make install
 4. Xschem
 
 XSCHEM is an open-source schematic capture tool for designing electronic circuits. It is available at https://github.com/StefanSchippers/xschem, and installation instructions are provided. 
-```
-git clone https://github.com/StefanSchippers/xschem.git xschem
-cd xschem
-./configure --prefix=/home/venkat 
-```
-To avoid errors after running the `./configure` command, some additional libraries should be installed in the system.
+
+Please make sure we have the following packages installed
 ``` 
 sudo apt-get install flex
 sudo apt-get install bison
 sudo apt-get install libxpm-dev 
 sudo apt-get install libx11-xcb-dev
 sudo apt-get install libjpeg-dev
+sudo apt-get install gawk
+sudo apt-get install mawk
+sudo apt-get install xterm
+sudo apt-get install tcl-tclreadline
+sudo apt-get install libxpm4
+sudo apt-get install libx11-xcb-dev
+sudo apt-get install libxcb1
+sudo apt-get install libxrender-dev
+sudo apt-get install libxrender1
+sudo apt-get install libx11-dev
 ```
-Rerun the `./configure` command after installing the libraries.
+After installing the additional packages, use these commands to install xschem
+
 ```
-make -j4
+git clone https://github.com/StefanSchippers/xschem.git xschem
+cd xschem
+./configure --prefix=/home/venkat 
+make 
 make install
 ```
 After installing xschem, we should install xschem_sky130 in order to obtain XSCHEM symbol libraries for the Google-Skywater 130nm process design kit. It is available at https://github.com/StefanSchippers/xschem_sky130, and installation instructions are provided. 
@@ -133,24 +143,33 @@ cd xschem_sky130/
 5. Ngspice
 
 ngspice is an open-source electronic circuit simulator that can be used for circuit analysis and simulation.
-Download the tarball from https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/37/ and unpack it
+
+The following packages might be needed to be installed on your system
 ```
- $ tar -zxvf ngspice-37.tar.gz
- $ cd ngspice-37
- $ mkdir release
- $ cd release
- $ ../configure  --with-x --with-readline=yes --disable-debug
+sudo apt-get install adms
+sudo apt-get install autoconf
+sudo apt-get install libtool
+sudo apt-get install libxaw7-dev
+sudo apt-get install build-essential
+sudo apt-get install libc6-dev
+sudo apt update
+sudo apt upgrade
+sudo apt-get install manpages-dev man-db manpages-posix-dev
+sudo apt-get install libreadline6-dev
+sudo apt-get update -y
+```
+To install ngspice go to https://github.com/ngspice/ngspice and follow this commands
+```
+ git clone https://github.com/ngspice/ngspice.git ngspice
+ cd ngspice
+ ./autogen.sh --adms
+ mkdir release
+ cd release
+ ../configure  --with-x --with-readline=yes --disable-debug
+ make
+ sudo make install
  ```
- To avoid errors after running the `./configure` command, some additional libraries should be installed in the system.
- ```
- sudo apt-get install libxaw7-dev
- sudo apt-get install libreadline-dev
- ```
- Rerun the `./configure` command after installing the libraries.
- ```
- $ make
- $ sudo make install
- ```
+
 <img width="921" alt="ngspice" src="https://user-images.githubusercontent.com/64173714/217905232-11985213-ed63-4449-9146-add781f941f9.png">
 
 
