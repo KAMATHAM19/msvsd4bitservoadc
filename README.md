@@ -304,10 +304,15 @@ DC analysis would be used to create a Voltage Transfer Characteristics (VTC) cur
 
 The schematic circuit is created by connecting components from the open_pdk library and performing transient analysis.
 
-<img width="923" alt="transient sch" src="https://user-images.githubusercontent.com/64173714/217958466-b3f6650e-7248-400f-bfbf-6537ebb4876c.png">
+<img width="923" alt="inverter schematic xschem trans" src="https://user-images.githubusercontent.com/64173714/218344215-2a247de5-f210-47c1-99bc-8888a5bd6973.png">
+
 
 Transient analysis of a circuit is the simulation of the circuit's electrical behaviour over time, specifically its response to changing input signals.
 
-<img width="745" alt="tran grap" src="https://user-images.githubusercontent.com/64173714/217958494-7689ef31-a95a-4bcc-840f-be18e72d1dc7.png">
+<img width="727" alt="tran" src="https://user-images.githubusercontent.com/64173714/218344227-314b2287-d26d-4236-b5ca-c0029ae695a7.png">
 
+<img width="722" alt="magic 1" src="https://user-images.githubusercontent.com/64173714/218344231-fcd77e6c-8670-4c2f-a8ae-a870de63f9e4.png">
+
+
+<img width="925" alt="magic 2" src="https://user-images.githubusercontent.com/64173714/218344238-7e9f7ddd-b45d-4c7b-b2fa-682f36343ca3.png">
 
