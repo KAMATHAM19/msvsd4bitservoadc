@@ -293,13 +293,14 @@ A CMOS inverter is typically made up of two complementary transistors, one p-typ
 One of the primary advantages of CMOS inverters is their low power consumption, as the transistors are only turned on when the input changes state, rather than constantly drawing current. Moreover, CMOS inverters are highly scalable and easily integrated into larger circuits, making them a popular choice for digital system design.    
 
 ## Creating Inverter Schematic using xschem
-The schematic circuit is created by connecting components from the open_pdk library and performing dc analysis (VTC) and transient analysis.
+The schematic circuit is created by connecting components from the open_pdk library and performing dc analysis (VTC).
 
-<img width="922" alt="new inv" src="https://user-images.githubusercontent.com/64173714/217958297-1a19653e-2b18-4c21-95f0-0581908c9495.png">
+<img width="925" alt="inverter schematic xschem dc" src="https://user-images.githubusercontent.com/64173714/218326583-704c08c3-c866-4124-8ca1-b5e7feaadc3a.png">
 
 DC analysis would be used to create a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine how the circuit works with respect to different voltage levels in the input. When the simulation is run, the plot shown below is obtained.
 
-<img width="737" alt="dc plot2" src="https://user-images.githubusercontent.com/64173714/217958433-acfb5f75-26ed-4396-aa74-793e08e94a16.png">
+<img width="659" alt="dc" src="https://user-images.githubusercontent.com/64173714/218326601-d4310d78-607a-4e88-9e84-dff5820cebea.png">
+
 
 The schematic circuit is created by connecting components from the open_pdk library and performing transient analysis.
 
