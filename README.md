@@ -27,11 +27,11 @@
 | | Tools | Description|
 |--|--|--|
 | 1 | [Magic](#magic) | Circuit layout editor |
-| 2 | [SKY130 PDKs]() | Sky130nm libraries    |
-| 3 | [Netgen]()      | Netlist generator     |
-| 4 | [Xschem]()      | Schematic editor      |
-| 5 | [Ngspice]()     | SPICE simulation      |
-| 6 | [Align]()       | Analog netlist to GDS |
+| 2 | [SKY130 PDKs](#sky130-pdks) | Sky130nm libraries    |
+| 3 | [Netgen](#netgen)      | Netlist generator     |
+| 4 | [Xschem](#xschem)      | Schematic editor      |
+| 5 | [Ngspice](#ngspice)     | SPICE simulation      |
+| 6 | [Align](#align-tool)       | Analog netlist to GDS |
 
 <a name="magic"></a> 
 1. Magic
@@ -70,6 +70,7 @@ To view the magic application, type `magic -d XR` in the terminal
 
 <img width="922" alt="magic " src="https://user-images.githubusercontent.com/64173714/218270647-44fd6e14-a885-4431-8df3-e4a74a8e2aa9.png">
 
+<a name="sky130-pdks"></a> 
 2. SKY130 PDKs
 
 Process Design Kits, or OpenPDKs, are open source libraries and tools for designing and manufacturing integrated circuits (ICs). They provide a detailed set of design rules, library components, and other resources required for the physical design of an integrated circuit.
@@ -86,6 +87,7 @@ $  sudo make install
 
 <img width="922" alt="open_pdk" src="https://user-images.githubusercontent.com/64173714/217903616-ad0e3fc3-993c-4d41-bad9-7f43700431a5.png">
 
+<a name="netgen"></a> 
 3. Netgen
 
 Netgen is an open-source tool for creating electrical circuits and layouts automatically. It can generate a wide range of electrical circuits, such as full-custom layouts, standard cell-based layouts, and gate arrays. It can also generate routing data and physical masks for use in the fabrication of the final IC.
@@ -100,6 +102,7 @@ $  sudo make install
 ```
 <img width="922" alt="netgen" src="https://user-images.githubusercontent.com/64173714/217904006-9be0048a-e810-40d4-8d72-75bdbd1a1089.png">
 
+<a name="xschem"></a> 
 4. Xschem
 
 XSCHEM is an open-source schematic capture tool for designing electronic circuits. It is available at https://github.com/StefanSchippers/xschem, and installation instructions are provided. 
@@ -140,6 +143,7 @@ cd xschem_sky130/
 ```
 <img width="922" alt="xschem " src="https://user-images.githubusercontent.com/64173714/217904558-a577c075-d8a2-420f-b2c8-8a90bf9e345e.png">
 
+<a name="ngspice"></a> 
 5. Ngspice
 
 ngspice is an open-source electronic circuit simulator that can be used for circuit analysis and simulation.
@@ -172,7 +176,7 @@ To install ngspice go to https://github.com/ngspice/ngspice and follow this comm
 
 <img width="921" alt="ngspice" src="https://user-images.githubusercontent.com/64173714/217905232-11985213-ed63-4449-9146-add781f941f9.png">
 
-
+<a name="align-tool"></a>
 6. ALIGN tool
 
 ALIGN is an open-source analogue circuit layout generator. The goal of ALIGN (Analog Layout, Intelligently Generated from Netlists) is to automatically translate an analogue circuit's unannotated (or partially annotated) SPICE netlist to a GDSII layout.
