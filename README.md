@@ -315,6 +315,8 @@ Transient analysis of a circuit is the simulation of the circuit's electrical be
 
 <img width="727" alt="tran" src="https://user-images.githubusercontent.com/64173714/218344227-314b2287-d26d-4236-b5ca-c0029ae695a7.png">
 
+Post-layout
+
 <img width="722" alt="magic 1" src="https://user-images.githubusercontent.com/64173714/218344231-fcd77e6c-8670-4c2f-a8ae-a870de63f9e4.png">
 
 
