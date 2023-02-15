@@ -315,6 +315,40 @@ Transient analysis of a circuit is the simulation of the circuit's electrical be
 
 <img width="727" alt="tran" src="https://user-images.githubusercontent.com/64173714/218344227-314b2287-d26d-4236-b5ca-c0029ae695a7.png">
 
+```
+** sch_path: /home/venkat/pd/Lab1/inverter_schematic.sch
+**.subckt inverter_schematic vout vin vin
+*.opin vout
+*.ipin vin
+*.ipin vin
+
+XM2 vout vin Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+
+XM11 vout vin Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+
+Vdd VDD Gnd 1.8
+.save i(vdd)
+vin vin Gnd pulse(0 1.8 0 500ps 500ps 4ns 10ns)
+.save i(vin)
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.tran 0.01n 50n
+.save all
+**** end user architecture code
+**.ends
+
+.GLOBAL Gnd
+.GLOBAL Vdd
+.GLOBAL VDD
+.end
+```
+
 Post-layout
 
 <img width="722" alt="magic 1" src="https://user-images.githubusercontent.com/64173714/218344231-fcd77e6c-8670-4c2f-a8ae-a870de63f9e4.png">
@@ -323,5 +357,57 @@ Post-layout
 
 <img width="923" alt="magic 2" src="https://user-images.githubusercontent.com/64173714/219140660-02598962-f936-4bba-8afc-f307b721b9db.png">
 
+```
+extract do local
+extract all
+ext2spice lvs
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
 
 <img width="922" alt="magic 3" src="https://user-images.githubusercontent.com/64173714/219159239-36a32a10-2527-44e5-a1ce-72da45aa52ac.png">
+
+```
+* NGSPICE file created from inverter_schematic.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+C0 a_n73_n100# a_15_n100# 0.16fF
+C1 a_n33_n188# a_n73_n100# 0.03fF
+C2 a_n33_n188# a_15_n100# 0.03fF
+C3 a_15_n100# a_n175_n274# 0.08fF
+C4 a_n73_n100# a_n175_n274# 0.11fF
+C5 a_n33_n188# a_n175_n274# 0.30fF
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_XGS3BL a_n73_n100# a_15_n100# w_n211_n319# a_n33_n197#
++ VSUBS
+X0 a_15_n100# a_n33_n197# a_n73_n100# w_n211_n319# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+C0 w_n211_n319# a_15_n100# 0.06fF
+C1 a_n33_n197# a_n73_n100# 0.03fF
+C2 a_n33_n197# a_15_n100# 0.03fF
+C3 a_n73_n100# a_15_n100# 0.16fF
+C4 w_n211_n319# a_n33_n197# 0.26fF
+C5 w_n211_n319# a_n73_n100# 0.09fF
+C6 a_15_n100# VSUBS 0.02fF
+C7 a_n73_n100# VSUBS 0.02fF
+C8 a_n33_n197# VSUBS 0.05fF
+C9 w_n211_n319# VSUBS 1.07fF
+.ends
+
+.subckt inverter_schematic
+XXM2 vout vin vout VSUBS sky130_fd_pr__nfet_01v8_648S5X
+XXM11 vout vout XM11/w_n211_n319# vin VSUBS sky130_fd_pr__pfet_01v8_XGS3BL
+C0 vout XM11/w_n211_n319# 0.24fF
+C1 vout vin 0.68fF
+C2 vin XM11/w_n211_n319# 0.08fF
+C3 vin VSUBS 0.61fF
+C4 vout VSUBS 1.41fF
+C5 XM11/w_n211_n319# VSUBS 1.10fF
+.ends
+```
+
+```
+ netgen -batch lvs /home/venkat/pd/Lab1/inverter_schematic.spice /home/venkat/pd/Lab1/mag/inverter_schematic.spice
+
+```
