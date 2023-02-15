@@ -322,3 +322,6 @@ Post-layout
 
 
 <img width="923" alt="magic 2" src="https://user-images.githubusercontent.com/64173714/219140660-02598962-f936-4bba-8afc-f307b721b9db.png">
+
+
+<img width="922" alt="magic 3" src="https://user-images.githubusercontent.com/64173714/219159239-36a32a10-2527-44e5-a1ce-72da45aa52ac.png">
