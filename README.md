@@ -411,3 +411,5 @@ C5 XM11/w_n211_n319# VSUBS 1.10fF
  netgen -batch lvs /home/venkat/pd/Lab1/inverter_schematic.spice /home/venkat/pd/Lab1/mag/inverter_schematic.spice
 
 ```
+<img width="633" alt="netgen" src="https://user-images.githubusercontent.com/64173714/219203441-98bfa8e7-152f-4436-890c-21d92800c69b.png">
+
