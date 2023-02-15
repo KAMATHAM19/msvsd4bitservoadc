@@ -320,5 +320,5 @@ Post-layout
 <img width="722" alt="magic 1" src="https://user-images.githubusercontent.com/64173714/218344231-fcd77e6c-8670-4c2f-a8ae-a870de63f9e4.png">
 
 
-<img width="925" alt="magic 2" src="https://user-images.githubusercontent.com/64173714/218344238-7e9f7ddd-b45d-4c7b-b2fa-682f36343ca3.png">
 
+<img width="923" alt="magic 2" src="https://user-images.githubusercontent.com/64173714/219140660-02598962-f936-4bba-8afc-f307b721b9db.png">
