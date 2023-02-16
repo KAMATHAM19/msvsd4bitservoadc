@@ -8,7 +8,7 @@
    * [CMOS Inverter](#cmos-inverter)
 ## [Week 2](#week-2)
 
-<a name="week-0"></a>
+<a name="week-1"></a>
 ## Week 1
 
 <a name="prerequisites"></a>
@@ -322,7 +322,7 @@ C5 XM11/w_n211_n319# VSUBS 1.10fF
 <img width="633" alt="netgen" src="https://user-images.githubusercontent.com/64173714/219203441-98bfa8e7-152f-4436-890c-21d92800c69b.png">
 
 
-<a name="week-2"></a>
+<a name="week-2"></a> 
 ## Week 2
 
 <a name="align-tool"></a>
@@ -418,7 +418,7 @@ schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/
 ```
 <img width="925" alt="align 2" src="https://user-images.githubusercontent.com/64173714/217905324-340322ca-53a0-4713-9e90-5b6c970abe7c.png">
  
-<a name="klyaout"></a> 
+<a name="klayout"></a> 
 7. KLayout 
 
 KLayout is a GDS and OASIS file viewer
