@@ -32,6 +32,7 @@
 | 4 | [Xschem](#xschem)      | Schematic editor      |
 | 5 | [Ngspice](#ngspice)     | SPICE simulation      |
 | 6 | [Align](#align-tool)       | Analog netlist to GDS |
+| 7 | [KLayout](#klayout)       | GDS viewer |
 
 <a name="magic"></a> 
 1. Magic
@@ -417,3 +418,13 @@ schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/
 ```
 <img width="925" alt="align 2" src="https://user-images.githubusercontent.com/64173714/217905324-340322ca-53a0-4713-9e90-5b6c970abe7c.png">
  
+<a name="klyaout"></a> 
+7. KLayout 
+KLayout is a GDS and OASIS file viewer
+
+```
+sudo apt-get install qttools5-dev libqt5xmlpatterns5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5svg5-dev
+git clone https://github.com/KLayout/klayout
+cd klayout/
+./build.sh -prefix /usr/bin
+```
