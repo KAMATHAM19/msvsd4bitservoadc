@@ -10,7 +10,25 @@
       * [Ngspice](#ngspice) - SPICE simulation 
       * [Verifying the installation of open_pdk](#verifying-the-installation-of-open_pdk)
    * [CMOS Inverter](#cmos-inverter)
-      * [Creating Inverter Schematic using xschem](#creating-inverter-schematic-using-xschem)
+      * [Creating cmos inverter and performed pre-layout using xschem & ngspice](#creating-cmos-inverter-and-performed-pre-layout-using-xschem-&-ngspice)
+          * [DC Analysis](#dc-analysis)
+          * [Transient Analysis](#transient-analysis)
+          * [Generated pre-layout netlist from xschem & ngspice](#generated-pre-layout-netlist-from-xschem-&-ngspice)
+      
+
+
+
+
+
+
+Post-layout Simulation
+Comparison of pre-layout and post-layout timing parameters
+LVS Report
+Simulation of Inverter using Ngspice
+Pre-layout Simulation
+Post-layout Simulation
+Comparison of pre-layout and post-layout timing parameters
+LVS Report
 
 <a name="week-0"></a>
 ## Week 0
@@ -200,26 +218,29 @@ A CMOS inverter is typically made up of two complementary transistors, one p-typ
 One of the primary advantages of CMOS inverters is their low power consumption, as the transistors are only turned on when the input changes state, rather than constantly drawing current. Moreover, CMOS inverters are highly scalable and easily integrated into larger circuits, making them a popular choice for digital system design.    
 
 
-<a name="creating-inverter-schematic-using-xschem"></a>
-## Creating Inverter Schematic using xschem
-The schematic circuit is created by connecting components from the open_pdk library and performing dc analysis (VTC).
+<a name="creating-cmos-inverter-and-performed-pre-layout-using-xschem-&-ngspice"></a>
+## Creating cmos inverter and performed pre-layout using xschem & ngspice
+The schematic circuit is created by connecting components from the open_pdk library.
 
 <img width="925" alt="inverter schematic xschem dc" src="https://user-images.githubusercontent.com/64173714/218326583-704c08c3-c866-4124-8ca1-b5e7feaadc3a.png">
 
+<a name="dc-analysis"></a>
+### DC Analysis
 DC analysis would be used to create a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine how the circuit works with respect to different voltage levels in the input. When the simulation is run, the plot shown below is obtained.
 
 <img width="659" alt="dc" src="https://user-images.githubusercontent.com/64173714/218326601-d4310d78-607a-4e88-9e84-dff5820cebea.png">
 
+<a name="transient-analysis"></a>
+### Transient Analysis
+Transient analysis of a circuit is the simulation of the circuit's electrical behaviour over time, specifically its response to changing input signals.
 
 The schematic circuit is created by connecting components from the open_pdk library and performing transient analysis.
 
 <img width="923" alt="inverter schematic xschem trans" src="https://user-images.githubusercontent.com/64173714/218344215-2a247de5-f210-47c1-99bc-8888a5bd6973.png">
-
-
-Transient analysis of a circuit is the simulation of the circuit's electrical behaviour over time, specifically its response to changing input signals.
-
 <img width="727" alt="tran" src="https://user-images.githubusercontent.com/64173714/218344227-314b2287-d26d-4236-b5ca-c0029ae695a7.png">
 
+<a name="generated-pre-layout-netlist-from-xschem-&-ngspice"></a>
+### Generated pre-layout netlist from xschem & ngspice
 ```
 ** sch_path: /home/venkat/pd/Lab1/inverter_schematic.sch
 **.subckt inverter_schematic vout vin vin
