@@ -3,7 +3,14 @@
 ## [Week 0](#week-0)
    * [Prerequisites](#prerequisites)
    * [Open Source tools](#open-source-tools)
+      * [Magic](#magic) - Circuit layout editor
+      * [SKY130 PDKs](#sky130-pdks) - Sky130nm libraries 
+      * [Netgen](#netgen)  - Netlist generator 
+      * [Xschem](#xschem)  - Schematic editor  
+      * [Ngspice](#ngspice) - SPICE simulation 
+      * [Verifying the installation of open_pdk](#verifying-the installation-of-open_pdk)
    * [CMOS Inverter](#cmos-inverter)
+      * [Creating Inverter Schematic using xschem](#creating-inverter-schematic-using-xschem)
 
 <a name="week-0"></a>
 ## Week 0
@@ -20,14 +27,6 @@
  
 <a name="open-source-tools"></a> 
 ### Open Source tools
-
-| | Tools | Description|
-|--|--|--|
-| 1 | [Magic](#magic) | Circuit layout editor |
-| 2 | [SKY130 PDKs](#sky130-pdks) | Sky130nm libraries    |
-| 3 | [Netgen](#netgen)      | Netlist generator     |
-| 4 | [Xschem](#xschem)      | Schematic editor      |
-| 5 | [Ngspice](#ngspice)     | SPICE simulation      |
 
 <a name="magic"></a> 
 1. Magic
@@ -169,9 +168,9 @@ To install ngspice go to https://github.com/ngspice/ngspice and follow this comm
  make
  sudo make install
  ```
-
 <img width="921" alt="ngspice" src="https://user-images.githubusercontent.com/64173714/217905232-11985213-ed63-4449-9146-add781f941f9.png">
 
+<a name="verifying-the installation-of-open_pdk"></a>
 Verifying the installation of open_pdk
 
 To create an initial working directory, copy the following files:
@@ -186,11 +185,12 @@ $ cp /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc .
 $ cp /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
 $ cd ../mag
 $ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+$ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.tech .sky130A.tech
 $ cd ../netgen
 $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
 ```
-<a name="cmos-inverter"></a>
 
+<a name="cmos-inverter"></a>
 ## CMOS INVERTER
 
   A CMOS inverter is a type of digital circuit that converts a digital input signal from one state (e.g., 0 or 1) to its opposite state (e.g., 1 or 0). It is a fundamental component of digital electronics that is widely used in digital systems such as microprocessors, digital logic circuits, and digital-to-analog converters.
@@ -199,6 +199,8 @@ A CMOS inverter is typically made up of two complementary transistors, one p-typ
 
 One of the primary advantages of CMOS inverters is their low power consumption, as the transistors are only turned on when the input changes state, rather than constantly drawing current. Moreover, CMOS inverters are highly scalable and easily integrated into larger circuits, making them a popular choice for digital system design.    
 
+
+<a name="creating-inverter-schematic-using-xschem"></a>
 ## Creating Inverter Schematic using xschem
 The schematic circuit is created by connecting components from the open_pdk library and performing dc analysis (VTC).
 
