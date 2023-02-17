@@ -11,25 +11,15 @@
       * [Verifying the installation of open_pdk](#verifying-the-installation-of-open_pdk)
    * [CMOS Inverter](#cmos-inverter)
       * [Creating cmos inverter and performed pre-layout using xschem & ngspice](#creating-cmos-inverter-and-performed-pre-layout-using-xschem-&-ngspice)
-          * [DC Analysis](#dc-analysis)
-          * [Transient Analysis](#transient-analysis)
+          * [Pre-layout DC Analysis](#pre-layout-dc-analysis)
+          * [Pre-layout Transient Analysis](#pre-layout-transient-analysis)
           * [Generated pre-layout netlist from xschem & ngspice](#generated-pre-layout-netlist-from-xschem-&-ngspice)
       * [Post-layout characterization of an inverter using Magic & SKY130 PDKs](#post-layout-characterization-of-an-inverter-using-magic-&-sky130-pdks)
+          * [Generated post-layout netlist from magic & SKY130 PDKs](#generated-post-layout-netlist-from-magic-&-sky130-pdks)
+          * [Post-layout DC Analysis](#post-layout-dc-analysis)
+          * [Post-layout Transient Analysis](#post-layout-transient-analysis)
+       * [Layout vs Schematic report](#layout-vs-schematic-report)
       
-
-
-
-
-
-
-Post-layout Simulation
-Comparison of pre-layout and post-layout timing parameters
-LVS Report
-Simulation of Inverter using Ngspice
-Pre-layout Simulation
-Post-layout Simulation
-Comparison of pre-layout and post-layout timing parameters
-LVS Report
 
 <a name="week-0"></a>
 ## Week 0
@@ -298,9 +288,10 @@ ext2spice lvs
 ext2spice cthresh 0 rthresh 0
 ext2spice
 ```
-
 <img width="922" alt="magic 3" src="https://user-images.githubusercontent.com/64173714/219159239-36a32a10-2527-44e5-a1ce-72da45aa52ac.png">
 
+<a name="generated-post-layout-netlist-from-magic-&-sky130-pdks"></a>
+### Generated post-layout netlist from magic & SKY130 PDKs
 ```
 * NGSPICE file created from inverter_schematic.ext - technology: sky130A
 
@@ -341,13 +332,17 @@ C5 XM11/w_n211_n319# VSUBS 1.10fF
 .ends
 ```
 
+<img width="923" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219517375-daba3f48-3746-4341-8161-8e23cd705934.png">
+
+<a name="layout-vs-schematic-report"></a>
+## Layout vs Schematic report
 ```
  netgen -batch lvs /home/venkat/pd/Lab1/inverter_schematic.spice /home/venkat/pd/Lab1/mag/inverter_schematic.spice
 
 ```
 <img width="633" alt="netgen" src="https://user-images.githubusercontent.com/64173714/219203441-98bfa8e7-152f-4436-890c-21d92800c69b.png">
 
-<img width="923" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219517375-daba3f48-3746-4341-8161-8e23cd705934.png">
+
 
 
 
