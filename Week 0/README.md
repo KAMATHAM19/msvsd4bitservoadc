@@ -28,8 +28,6 @@
 | 3 | [Netgen](#netgen)      | Netlist generator     |
 | 4 | [Xschem](#xschem)      | Schematic editor      |
 | 5 | [Ngspice](#ngspice)     | SPICE simulation      |
-| 6 | [Align](#align-tool)       | Analog netlist to GDS |
-| 7 | [KLayout](#klayout)       | GDS viewer |
 
 <a name="magic"></a> 
 1. Magic
