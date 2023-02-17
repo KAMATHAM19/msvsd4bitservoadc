@@ -8,7 +8,7 @@
       * [Netgen](#netgen)  - Netlist generator 
       * [Xschem](#xschem)  - Schematic editor  
       * [Ngspice](#ngspice) - SPICE simulation 
-      * [Verifying the installation of open_pdk](#verifying-the installation-of-open_pdk)
+      * [Verifying the installation of open_pdk](#verifying-the-installation-of-open_pdk)
    * [CMOS Inverter](#cmos-inverter)
       * [Creating Inverter Schematic using xschem](#creating-inverter-schematic-using-xschem)
 
@@ -170,7 +170,7 @@ To install ngspice go to https://github.com/ngspice/ngspice and follow this comm
  ```
 <img width="921" alt="ngspice" src="https://user-images.githubusercontent.com/64173714/217905232-11985213-ed63-4449-9146-add781f941f9.png">
 
-<a name="verifying-the installation-of-open_pdk"></a>
+<a name="verifying-the-installation-of-open_pdk"></a>
 Verifying the installation of open_pdk
 
 To create an initial working directory, copy the following files:
