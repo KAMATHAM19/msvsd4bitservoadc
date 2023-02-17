@@ -14,6 +14,7 @@
           * [DC Analysis](#dc-analysis)
           * [Transient Analysis](#transient-analysis)
           * [Generated pre-layout netlist from xschem & ngspice](#generated-pre-layout-netlist-from-xschem-&-ngspice)
+      * [Post-layout characterization of an inverter using Magic & SKY130 PDKs](#post-layout-characterization-of-an-inverter-using-magic-&-sky130-pdks)
       
 
 
@@ -274,14 +275,21 @@ vin vin Gnd pulse(0 1.8 0 500ps 500ps 4ns 10ns)
 .GLOBAL VDD
 .end
 ```
+<a name="post-layout-characterization-of-an-inverter-using-magic-&-sky130-pdks"></a>
+## Post-layout characterization of an inverter using Magic & SKY130 PDKs
 
-Post-layout
-
+Copy sky130A.tech and .magicrc to your current working directory and launch the magic using command
+```
+magic -T sky130A.tech
+```
+Import your inverter's spice netlist into the Layout window
 <img width="722" alt="magic 1" src="https://user-images.githubusercontent.com/64173714/218344231-fcd77e6c-8670-4c2f-a8ae-a870de63f9e4.png">
 
-
+Rearrange the nfet and pfet by pressing `i` for select and `m` for moving it to the desired location and add labels/ports. Route the metal1 layer `In tkcon window tpye paint m1` in such a way that the layout has no DRC
 
 <img width="923" alt="magic 2" src="https://user-images.githubusercontent.com/64173714/219140660-02598962-f936-4bba-8afc-f307b721b9db.png">
+
+To extract the spice netlist from the layout, use commands
 
 ```
 extract do local
