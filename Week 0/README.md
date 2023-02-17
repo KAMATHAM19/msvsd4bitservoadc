@@ -331,13 +331,18 @@ C4 vout VSUBS 1.41fF
 C5 XM11/w_n211_n319# VSUBS 1.10fF
 .ends
 ```
-
+open the post-layout netlist in ngspice
+```
+    ngspice inverter_schematic.spice
+```
 <a name="post-layout-transient-analysis"></a>
 ### Post-layout Transient analysis
 <img width="923" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219517375-daba3f48-3746-4341-8161-8e23cd705934.png">
 
 <a name="layout-vs-schematic-report"></a>
 ## Layout vs Schematic report
+
+Perform an LVS check on the pre-layout and post-layout netlists
 ```
  netgen -batch lvs /home/venkat/pd/Lab1/inverter_schematic.spice /home/venkat/pd/Lab1/mag/inverter_schematic.spice
 
