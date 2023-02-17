@@ -215,14 +215,14 @@ The schematic circuit is created by connecting components from the open_pdk libr
 
 <img width="925" alt="inverter schematic xschem dc" src="https://user-images.githubusercontent.com/64173714/218326583-704c08c3-c866-4124-8ca1-b5e7feaadc3a.png">
 
-<a name="dc-analysis"></a>
-### DC Analysis
+<a name="pre-layout-dc-analysis"></a>
+### Pre-layout DC Analysis
 DC analysis would be used to create a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine how the circuit works with respect to different voltage levels in the input. When the simulation is run, the plot shown below is obtained.
 
 <img width="659" alt="dc" src="https://user-images.githubusercontent.com/64173714/218326601-d4310d78-607a-4e88-9e84-dff5820cebea.png">
 
-<a name="transient-analysis"></a>
-### Transient Analysis
+<a name="pre-layout-transient-analysis"></a>
+### Pre-layout Transient Analysis
 Transient analysis of a circuit is the simulation of the circuit's electrical behaviour over time, specifically its response to changing input signals.
 
 The schematic circuit is created by connecting components from the open_pdk library and performing transient analysis.
@@ -332,6 +332,8 @@ C5 XM11/w_n211_n319# VSUBS 1.10fF
 .ends
 ```
 
+<a name="post-layout-transient-analysis"></a>
+### Post-layout Transient analysis
 <img width="923" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219517375-daba3f48-3746-4341-8161-8e23cd705934.png">
 
 <a name="layout-vs-schematic-report"></a>
