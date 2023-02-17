@@ -2,8 +2,12 @@
 <a name="week-1"></a> 
 ## Week 1
 
+| 1 | [Align](#align-tool)       | Analog netlist to GDS |
+| 2 | [KLayout](#klayout)       | GDS viewer |
+
+
 <a name="align-tool"></a>
-6. ALIGN tool
+1. ALIGN tool
 
 ALIGN is an open-source analogue circuit layout generator. The goal of ALIGN (Analog Layout, Intelligently Generated from Netlists) is to automatically translate an analogue circuit's unannotated (or partially annotated) SPICE netlist to a GDSII layout.
 Prerequisites in the system are required for installation. 
@@ -96,9 +100,9 @@ schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/
 <img width="925" alt="align 2" src="https://user-images.githubusercontent.com/64173714/217905324-340322ca-53a0-4713-9e90-5b6c970abe7c.png">
  
 <a name="klayout"></a> 
-7. KLayout 
+2. KLayout 
 
-KLayout is a GDS and OASIS file viewer
+KLayout is a GDS file viewer
 
 ```
 sudo apt-get install qttools5-dev libqt5xmlpatterns5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5svg5-dev
