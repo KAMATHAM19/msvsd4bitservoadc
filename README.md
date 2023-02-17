@@ -1,12 +1,10 @@
 # msvsd4bitservoadc
 
-
 # Table of Contents
 ## [Week 0](#week-0)
    * [Prerequisites](#prerequisites)
    * [Open Source tools](#open-source-tools)
    * [CMOS Inverter](#cmos-inverter)
-## [Week 1](#week-1)
 
 <a name="week-0"></a>
 ## Week 0
@@ -322,6 +320,8 @@ C5 XM11/w_n211_n319# VSUBS 1.10fF
 <img width="633" alt="netgen" src="https://user-images.githubusercontent.com/64173714/219203441-98bfa8e7-152f-4436-890c-21d92800c69b.png">
 
 <img width="923" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219517375-daba3f48-3746-4341-8161-8e23cd705934.png">
+
+
 
 
 
