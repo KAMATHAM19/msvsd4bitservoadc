@@ -341,15 +341,19 @@ open the post-layout netlist in ngspice
 
 From the transient response, we will now characterise the cell's slew rate and propagation delay
 1. Rise transiton - time taken by output waveform to transit from 20%(0.36v) to 80%(1.44v) of VDD(1.8v max value) 
+
    4.83095e-09 - 4.78239e-09 = 0.05ns = 50ps
 
 2. Fall transition - time taken by output waveform to transit from 80% (1.44v) to 20% (0.36v) of VDD
+
    1.02815 - 1.02459 = 0.00356ns = 3.56ps
    
 3. Rise cell delay - The difference between the time when output as well as input is at 50% (0.9v) i.e falling at 50% of output is rising
+
    4.80833 - 4.75208 = 0.05625ns = 56.25ps
 
 4. Fall cell delay - The difference between the time when output as well as input is at 50% (0.9v) i.e falling at 50% of input is rising
+
    1.02651 - 1.025 = 0.00151ns = 1.51ps
 
 <a name="layout-vs-schematic-report"></a>
