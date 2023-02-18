@@ -213,7 +213,7 @@ One of the primary advantages of CMOS inverters is their low power consumption, 
 ## Creating cmos inverter and performed pre-layout using xschem & ngspice
 The schematic circuit is created by connecting components from the open_pdk library.
 
-<img width="925" alt="inverter schematic xschem dc" src="https://user-images.githubusercontent.com/64173714/218326583-704c08c3-c866-4124-8ca1-b5e7feaadc3a.png">
+<img width="922" alt="inverter schematic xschem dc" src="https://user-images.githubusercontent.com/64173714/219821665-1c58105d-0491-46b9-84e5-8372fbce9f8d.png">
 
 <a name="pre-layout-dc-analysis"></a>
 ### Pre-layout DC Analysis
@@ -335,6 +335,11 @@ open the post-layout netlist in ngspice
 ```
     ngspice inverter_schematic.spice
 ```
+<a name="post-layout-dc-analysis"></a>
+### Post-layout DC analysis
+
+<img width="921" alt="post dc" src="https://user-images.githubusercontent.com/64173714/219821893-41e1916d-dff7-4e75-8fba-788a920227f9.png">
+
 <a name="post-layout-transient-analysis"></a>
 ### Post-layout Transient analysis
 <img width="925" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219818907-cb784f41-22e5-44f3-b15b-8270d3d326af.png">
