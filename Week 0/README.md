@@ -366,8 +366,7 @@ Perform an LVS check on the pre-layout and post-layout netlists
 ```
 <img width="633" alt="netgen" src="https://user-images.githubusercontent.com/64173714/219203441-98bfa8e7-152f-4436-890c-21d92800c69b.png">
 
-
-
+<img width="920" alt="comp" src="https://user-images.githubusercontent.com/64173714/219820941-b8471cac-5ef9-41bb-8241-1cc64973c34b.png">
 
 
 
