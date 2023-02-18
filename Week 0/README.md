@@ -337,7 +337,7 @@ open the post-layout netlist in ngspice
 ```
 <a name="post-layout-transient-analysis"></a>
 ### Post-layout Transient analysis
-<img width="923" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219517375-daba3f48-3746-4341-8161-8e23cd705934.png">
+<img width="925" alt="post trans" src="https://user-images.githubusercontent.com/64173714/219818907-cb784f41-22e5-44f3-b15b-8270d3d326af.png">
 
 <a name="layout-vs-schematic-report"></a>
 ## Layout vs Schematic report
