@@ -20,7 +20,6 @@ Use the following commands to install ALIGN tool
 
 1.Setting the compiler paths 
 ```
-sudo apt-get install libboost-all-dev
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 ```
@@ -48,6 +47,7 @@ pip install gdspy
 pip install --no-binary :all: gdspy
 pip install align
 pip install --no-binary :all: align
+sudo apt-get install libboost-all-dev
 ```
 
 4.Install ALIGN as a USER
