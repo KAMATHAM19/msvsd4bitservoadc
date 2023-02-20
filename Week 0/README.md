@@ -82,7 +82,7 @@ Process Design Kits, or OpenPDKs, are open source libraries and tools for design
 To begin installing the open source tool, go to http://opencircuitdesign.com/open_pdks/ and the following steps
 ```
 $  git clone git://opencircuitdesign.com/open_pdks
-$  open_pdks
+$  cd open_pdks
 $	./configure --enable-sky130-pdk
 $  make
 $  sudo make install
