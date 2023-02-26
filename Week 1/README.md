@@ -24,14 +24,6 @@ sudo apt update
 sudo apt install lp-solve
 sudo apt-get install libboost-all-dev
 sudo apt-get install python3-dev libffi-dev libssl-dev
-pip install --upgrade pip
-pip install --upgrade setuptools
-pip install wheel
-pip install gdspy
-pip install --no-binary :all: gdspy
-pip install align
-pip install --no-binary :all: align
-
 ```
 1.Setting the compiler paths 
 ```
@@ -51,6 +43,14 @@ sudo apt install python3.10-venv
 python3 -m venv general
 source general/bin/activate
 python3 -m pip install pip --upgrade
+
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install wheel
+pip install gdspy
+pip install --no-binary :all: gdspy
+pip install align
+pip install --no-binary :all: align
 ```
 4.Install ALIGN as a USER
 ```
