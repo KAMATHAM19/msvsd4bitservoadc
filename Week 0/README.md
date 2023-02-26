@@ -134,9 +134,9 @@ After installing the additional packages, use these commands to install xschem
 ```
 git clone https://github.com/StefanSchippers/xschem.git xschem
 cd xschem
-./configure --prefix=/home/venkat 
+./configure 
 make 
-make install
+sudo make install
 ```
 After installing xschem, we should install xschem_sky130 in order to obtain XSCHEM symbol libraries for the Google-Skywater 130nm process design kit. It is available at https://github.com/StefanSchippers/xschem_sky130, and installation instructions are provided. 
 
