@@ -18,6 +18,21 @@ Prerequisites in the system are required for installation.
 
 Use the following commands to install ALIGN tool
 
+some packages are required to be installed in the system 
+```
+sudo apt update
+sudo apt install lp-solve
+sudo apt-get install libboost-all-dev
+sudo apt-get install python3-dev libffi-dev libssl-dev
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install wheel
+pip install gdspy
+pip install --no-binary :all: gdspy
+pip install align
+pip install --no-binary :all: align
+
+```
 1.Setting the compiler paths 
 ```
 export CC=/usr/bin/gcc
@@ -37,19 +52,6 @@ python3 -m venv general
 source general/bin/activate
 python3 -m pip install pip --upgrade
 ```
-some packages are required to be installed in the system 
-```
-pip install --upgrade pip
-pip install --upgrade setuptools
-pip install wheel
-sudo apt-get install python3-dev libffi-dev libssl-dev
-pip install gdspy
-pip install --no-binary :all: gdspy
-pip install align
-pip install --no-binary :all: align
-sudo apt-get install libboost-all-dev
-```
-
 4.Install ALIGN as a USER
 ```
 pip install -v .
