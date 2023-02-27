@@ -88,7 +88,7 @@ KLayout is a GDS file viewer
 
 ```
 sudo apt-get install qttools5-dev libqt5xmlpatterns5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5svg5-dev
-git clone https://github.com/KLayout/klayout
+git clone https://github.com/KLayout/klayout.git
 cd klayout/
 ./build.sh -prefix /usr/bin
 ```
