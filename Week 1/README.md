@@ -17,57 +17,34 @@ Prerequisites in the system are required for installation.
 `python >= 3.7`
 
 Use the following commands to install ALIGN tool
-
-some packages are required to be installed in the system 
 ```
-sudo apt update
-sudo apt install lp-solve
-sudo apt-get install libboost-all-dev
-```
-sudo apt-get install python3-dev libffi-dev libssl-dev
-
-1.Setting the compiler paths 
-```
+# Setting the compiler paths 
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
-```
-
-2.Clone the ALIGN source code to your local environment
-```
+# Clone the ALIGN source code to your local environment
 git clone https://github.com/ALIGN-analoglayout/ALIGN-public
 cd ALIGN-public
-```
-3.Create a Python virtualenv
-```
+# Create a Python virtualenv
 sudo apt install python3.10-venv
 python3 -m venv general
 source general/bin/activate
 python3 -m pip install pip --upgrade
-```
+# some packages are required to be installed in the system 
+sudo apt-get install libboost-all-dev
+sudo apt install lp-solve
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install wheel
+sudo apt-get install python3-dev libffi-dev libssl-dev
 pip install gdspy
 pip install --no-binary :all: gdspy
 pip install align
 pip install --no-binary :all: align
-
-pip install --upgrade pip
-sudo apt-get install build-essential python3-dev
-pip install --no-cache-dir --force-reinstall align
-
-
-4.Install ALIGN as a USER
-```
+# Install ALIGN as a USER
 pip install -v .
-```
-
-5. Install ALIGN as a DEVELOPER
-```
+# Install ALIGN as a DEVELOPER
 pip install -e .
-```
-6.For ALIGN (C++) Extension developers
-```
+# For ALIGN (C++) Extension developers
 pip install setuptools wheel pybind11 scikit-build cmake ninja
 pip install -v -e .[test] --no-build-isolation
 pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TESTING=ON'
