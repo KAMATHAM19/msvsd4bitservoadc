@@ -36,10 +36,6 @@ pip install --upgrade pip
 pip install --upgrade setuptools
 pip install wheel
 sudo apt-get install python3-dev libffi-dev libssl-dev
-pip install gdspy
-pip install --no-binary :all: gdspy
-pip install align
-pip install --no-binary :all: align
 # Install ALIGN as a USER
 pip install -v .
 # Install ALIGN as a DEVELOPER
