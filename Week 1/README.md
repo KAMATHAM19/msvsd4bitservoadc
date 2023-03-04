@@ -87,7 +87,7 @@ schematic2layout.py ../ALIGN-pdk-sky130/examples/five_transistor_ota -p ../pdks/
 KLayout is a GDS file viewer
 
 ```
-sudo apt-get install qttools5-dev libqt5xmlpatterns5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5svg5-dev
+sudo apt-get install qtbase5-dev qttools5-dev libqt5xmlpatterns5-dev qtmultimedia5-dev libqt5multimediawidgets5 libqt5svg5-dev libz-dev
 git clone https://github.com/KLayout/klayout.git
 cd klayout/
 ./build.sh -prefix /usr/bin
