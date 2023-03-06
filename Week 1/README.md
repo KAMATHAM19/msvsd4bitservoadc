@@ -21,14 +21,17 @@ Use the following commands to install ALIGN tool
 # Setting the compiler paths 
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
+
 # Clone the ALIGN source code to your local environment
 git clone https://github.com/ALIGN-analoglayout/ALIGN-public
 cd ALIGN-public
+
 # Create a Python virtualenv
 sudo apt install python3.10-venv
 python3 -m venv general
 source general/bin/activate
 python3 -m pip install pip --upgrade
+
 # some packages are required to be installed in the system 
 sudo apt-get install libboost-all-dev
 sudo apt install lp-solve
@@ -36,10 +39,13 @@ pip install --upgrade pip
 pip install --upgrade setuptools
 pip install wheel
 sudo apt-get install python3-dev libffi-dev libssl-dev
+
 # Install ALIGN as a USER
 pip install -v .
+
 # Install ALIGN as a DEVELOPER
 pip install -e .
+
 # For ALIGN (C++) Extension developers
 pip install setuptools wheel pybind11 scikit-build cmake ninja
 pip install -v -e .[test] --no-build-isolation
